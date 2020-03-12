@@ -32,18 +32,11 @@
 				</f:facet>
 				<h:outputText value="#{book.genero}"></h:outputText>
 			</p:column>
-			<p:column>
+			<p:column style="text-align: center;">
 				<f:facet name="header">
 					<h:outputText value="Ano de lançamento"></h:outputText>
 				</f:facet>
 				<h:outputText value="#{book.anoLancamento}"></h:outputText>
-			</p:column>
-			<p:column>
-				<p:commandLink value="Selecionar"
-					action="#{manipuladorDataTable.exibirDadosLinha()}">
-					<f:setPropertyActionListener value="#{book}"
-						target="#{manipuladorDataTable.livroSelecionado}" />
-				</p:commandLink>
 			</p:column>
 		</p:dataTable>
 	</h:form>
@@ -56,3 +49,4 @@
 	<h:outputText value="" />
 </h:body>
 </html>
+<!--  -->
