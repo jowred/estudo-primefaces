@@ -56,8 +56,8 @@ public class ManipuladorDataTable {
             System.out.println(livroSelecionado);
     }
     
-    public void onRowSelected(SelectEvent event) {
-        
+    public void onRowSelect(SelectEvent event) {
+        this.exibirDadosLinha();
     }
 
 }
