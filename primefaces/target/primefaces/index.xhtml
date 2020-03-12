@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xml:lang="pt-BR">
+
+<h:head>
+</h:head>
+<h:body>
+	<h1>Hello World PrimeFaces</h1>
+
+	<h:form>
+		<h3>Nome</h3>
+		<p:inputText />
+		<h3>Floating Label</h3>
+		<h:outputText value="#{basicView.text}" />
+		<h:form>
+			<p:editor value="#{editor.value}" />
+		</h:form>
+	</h:form>
+	<br/>
+	<p:outputLabel value="Exemplo prático com PrimeFaces"></p:outputLabel>
+	<p:dataTable value="#{viewFuncionariosManagedBean.funcionarios}" var="funcionario">
+		<p:column>
+			<f:facet name="header">
+				<h:outputText value="ID"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{funcionario.id}"></h:outputText>
+		</p:column>
+		<p:column>
+			<f:facet name="header">
+				<h:outputText value="Nome"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{funcionario.nome}"></h:outputText>
+		</p:column>
+	</p:dataTable>
+</h:body>
+</html>
