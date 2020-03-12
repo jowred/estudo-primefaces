@@ -53,12 +53,7 @@ public class ManipuladorDataTable {
     }
     
     public void exibirDadosLinha() {
-            System.out.println("Livro selecionado:\n" +
-                livroSelecionado.getId() + " | "
-                    + livroSelecionado.getTitulo() + " | "
-                    + livroSelecionado.getAutor() +  " | "
-                    + livroSelecionado.getGenero() + " | "
-                    + livroSelecionado.getAnoLancamento());
+            System.out.println(livroSelecionado);
     }
     
     public void onRowSelected(SelectEvent event) {

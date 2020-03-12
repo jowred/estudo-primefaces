@@ -59,5 +59,13 @@ public class Livro {
     public void setAnoLancamento(String anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
-    
+
+    @Override
+    public String toString() {
+        return this.getId() + " | "
+         + this.getTitulo() + " | "
+         + this.getAutor() +  " | "
+         + this.getGenero() + " | "
+         + this.getAnoLancamento();
+    }
 }

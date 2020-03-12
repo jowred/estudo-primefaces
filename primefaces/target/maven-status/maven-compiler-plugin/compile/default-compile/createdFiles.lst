@@ -1,0 +1,7 @@
+com\mkyong\editor\BasicView.class
+br\com\contmatic\binding\Livro.class
+com\mkyong\editor\EditorBean.class
+br\com\contmatic\data\Funcionario.class
+br\com\contmatic\calendar\CalendarView.class
+br\com\contmatic\binding\ManipuladorDataTable.class
+br\com\contmatic\jsfbeans\ViewFuncionariosManagedBean.class

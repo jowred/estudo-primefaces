@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xml:lang="pt-BR">
+<h:head>
+	<title>Página 2</title>
+</h:head>
+<h:body>
+	<p:dataTable id="livros" value="#{manipuladorDataTable.livros}" rowKey="#{book.id}" var="book">
+		<p:column>
+			<f:facet name="header">
+				<h:outputText value="Título"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{book.titulo}"></h:outputText>
+		</p:column>
+		<p:column>
+			<f:facet name="header">
+				<h:outputText value="Autor"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{book.autor}"></h:outputText>
+		</p:column>
+		<p:column>
+			<f:facet name="header">
+				<h:outputText value="Gênero"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{book.genero}"></h:outputText>
+		</p:column>
+		<p:column>
+			<f:facet name="header">
+				<h:outputText value="Ano de lançamento"></h:outputText>
+			</f:facet>
+			<h:outputText value="#{book.anoLancamento}"></h:outputText>
+		</p:column>
+		<p:column>
+			<p:commandLink value="Selecionar" action="#{manipuladorDataTable.exibirDadosLinha()}">
+				<f:setPropertyActionListener value="#{book}" target="#{manipuladorDataTable.livroSelecionado}" />
+			</p:commandLink>
+		</p:column>
+	</p:dataTable>
+	<h:form>
+	<br />
+		<h:commandButton action="index" value="Home" />
+	</h:form>
+	<br />
+	<br />
+	<h:outputText value="" />
+</h:body>
+</html>

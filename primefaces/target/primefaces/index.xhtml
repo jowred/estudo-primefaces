@@ -8,6 +8,7 @@
 	xmlns:p="http://primefaces.org/ui" xml:lang="pt-BR">
 
 <h:head>
+ <title>PrimeFaces</title>
 </h:head>
 <h:body>
 	<h1>Hello World PrimeFaces</h1>
@@ -37,5 +38,14 @@
 			<h:outputText value="#{funcionario.nome}"></h:outputText>
 		</p:column>
 	</p:dataTable>
+	<br />
+	<br />
+	<p:calendar id="inline" value="#{calendarView.data}" mode="inline" />
+	
+	<h:form>
+		<h3>Teste de binding</h3>
+		<h:commandButton action="page2" value="Página 2" />
+	</h:form>
+	
 </h:body>
 </html>
